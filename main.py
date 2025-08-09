@@ -8,7 +8,7 @@ uploaded_file = st.file_uploader("Choose an Excel file", type=["xlsx", "xls",])
 
 if uploaded_file is not None:
     # Read file into DataFrame
-    df = pd.read_excel(uploaded_file)
+    df = pd.read_excel(uploaded_file,header=1)
 
     st.subheader("Preview")
     st.dataframe(df)  # Interactive table
